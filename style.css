@@ -8,9 +8,35 @@ html {
 .container{
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     gap: 15px;
 }
+input{
+    border-radius: 10px;
+}
+
+.user-info{
+    display: flex;
+    padding: 0 1em;
+}
+
+.profile-pic{
+    height: 16vh;
+    width: 8vw;
+    border-radius: 50%;
+    border-style: double;
+    border-color: antiquewhite;
+    
+}
+
+.Calculator{
+    object-fit: contain;
+}
+
+.Rock-Paper-Scissors{
+    object-fit: contain;
+}
+
 
 /*left*/
 .left{
@@ -22,12 +48,50 @@ html {
     grid-row: 1/5;
 }
 
+nav{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+ul{
+    list-style: none;
+    padding: 0 0 0.5em 2em;
+}
+
+li{
+gap: 10px;
+
+}
+
+.Calculator, .Etch-a-sketch, .Rock-Paper-Scissors, .signupForm{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.section-1, .section-2{
+    display: flex;
+}
+
+.items{
+   
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size:1.5em;
+}
+
 /*right*/
 
 .right{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
     gap:30px;
 }
 
@@ -39,7 +103,11 @@ html {
     grid-template-rows: 1fr 2fr;
     background-color: burlywood;
 }
-  
+
+.material-symbols-outlined{
+    font-size: larger;
+}
+
 .content{
     grid-row: 2/3;
     grid-column: 1/3;
@@ -52,25 +120,37 @@ html {
 .content-left{
     display: grid;
     height: 100%;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 3fr);
     gap:15px
 }
 
+.Etch-a-sketch{
+    object-fit: contain;
+}
+
+.signupForm{
+   object-fit: fill; 
+}
+
 .proj_card{
-    background-color: crimson;
+    
 }
 .content-right{
     display: flex;
     flex-direction: column;
+    gap:15px;
+    padding: 0 1em;
 }
 
 .announcements{
     flex-grow: 1;
     background-color: aqua;
+    border-radius: 10px;
 }
 
 .trending{
     flex-grow: 1;
     background-color: blanchedalmond;
+    border-radius: 10px;
 }
