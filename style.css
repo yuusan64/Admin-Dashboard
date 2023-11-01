@@ -9,11 +9,12 @@ html {
     display: grid;
     height: 100%;
     grid-template-columns: 300px auto;
-    gap: 15px;
 }
 input{
+    border: none;
     border-radius: 10px;
     width: 100%;
+    background-color: #e7e5e4;
 }
 .search-bar{
     display:flex;
@@ -25,15 +26,17 @@ input{
 .user-info{
     display: flex;
     padding: 0 1em;
+    gap: 0.5em;
 }
 
 .profile-pic{
-    height: 16vh;
-    width: 8vw;
+    height: 12vh;
+    width: 5vw;
     border-radius: 50%;
     border-style: double;
-    border-color: antiquewhite;
+    border-color: #F3B1AD;
 }
+
 
 .Calculator{ 
     background-image: url("images/Calculator.png");
@@ -63,21 +66,17 @@ h3{
  margin: 0;
 }
 
-img{
-    height: 15em;
-    width: 30em;
+.git{
+    height:2.5em;
+    width:2.5em;
+    opacity: 0.9;
 }
-
 /*left*/
 .left{
     display: grid;
 }
-.sidebar {
-    background-color: aqua;
-    grid-column: 1/2;
-    grid-row: 1/5;
-    padding-top: 5em;
-}
+
+/*background-image: linear-gradient(to bottom, #F3B1AD, #B48D8E);*/
 
 nav{
     display: flex;
@@ -85,15 +84,54 @@ nav{
     gap:5px;
 }
 
-ul{
+ul#left-list{
     list-style: none;
     padding: 0 0 0.5em 2em;
 }
 
-li{
-    padding-top: 2em;
+
+ul#right-list li {
+    list-style: none;
+    background-image: url(images/list-icon.png);
+    background-repeat: no-repeat;
+    /* background-position: left center; */
+    background-size: 20px;
+    padding: 0.5em 2em;
+    background-position-y: 0.7em;
+}
+
+
+li::marker{
+    font-size: 1em;
+    list-style-position: inside;
+    background-size: 20px;
 
 }
+
+ul#right-list{
+padding: 0.5em 0.5em;
+
+}
+
+ul#left-list li{
+    padding-top: 2em;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    border-bottom-color: #f3c2bf;
+    border-bottom-style: dashed;
+}
+
+.dashboard{
+    display: flex;
+}
+
+.dashboard-icon{
+    height: 7vh;
+    width: 4vw;
+    padding: 0 0.5em;
+}
+
 
 /*.Calculator, .Etch-a-sketch, .Rock-Paper-Scissors, .signupForm{
 
@@ -104,7 +142,16 @@ li{
     border-radius: 15px;
 }*/
 
+.buttons{
+    
+}
 
+button{
+    border-radius: 15%;
+    background-color: beige;
+    padding: 0.5em;
+    margin: 0.5em;
+}
 
 .section-1, .section-2{
     display: flex;
@@ -114,12 +161,13 @@ li{
    display:flex;
    flex-direction: column;
    gap:15px;
+   padding: 0 0 0 1em;
 }
 
 a {
     text-decoration: none;
     color: black;
-    font-size:1.5em;
+    font-size:1.4em;
 }
 
 /*right*/
@@ -127,25 +175,39 @@ a {
 .right{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    gap:30px;
+    grid-template-rows: 12em 2fr;
+    gap: 30px;
+    background-color: #e7e5e4;
 }
 
 .header {
+    background-color: #fafaf9;
     grid-column: 1 / 3;
-    grid-row: 1/2; 
+    grid-row: 1/2;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    background-color: burlywood;
+    grid-template-rows: 4em 3fr;
+    
+}
+
+.sidebar  {
+    background-color: beige;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    padding-top: 5em;
+    
 }
 
 .material-symbols-outlined{
     font-size: larger;
+    opacity: 0.8;
 }
 
 .profile{
-    padding:1em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 .content{
@@ -162,7 +224,7 @@ a {
     height: 100%;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 3fr);
-    gap:15px;
+    gap:2.5em;
     
 }
 
@@ -175,12 +237,14 @@ a {
 }
 
 .project{
-    position: relative; 
+    border: none;
+    position: relative;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-style: solid;
-    border-radius: 15px;
+    /* border-style: solid; */
+    border-radius: 1.2em;
+    box-shadow: 0px 3px 25px -13px;
    
 }
 
@@ -193,13 +257,14 @@ a {
 
 .announcements{
     flex-grow: 2;
-    background-color: aqua;
+    
+    background-color: beige;
     border-radius: 10px;
 }
 
 .trending{
     flex-grow: 1;
-    background-color: blanchedalmond;
+    background-color: #f2cbc9;
     border-radius: 10px;
 }
 
@@ -212,6 +277,7 @@ a {
     position: absolute;
     right:0;
     top:1;
+    padding: 0.2em;
 }
 
 .image-footer{
