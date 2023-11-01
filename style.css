@@ -67,6 +67,9 @@ h3{
 }
 
 .git{
+    background-image: url("images/github-mark.png");
+    background-position: center;
+    background-size: cover;
     height:2.5em;
     width:2.5em;
     opacity: 0.9;
@@ -96,7 +99,7 @@ ul#right-list li {
     background-repeat: no-repeat;
     /* background-position: left center; */
     background-size: 20px;
-    padding: 0.5em 2em;
+    padding: 0.5em 1em 0.5em 2em;
     background-position-y: 0.7em;
 }
 
@@ -109,7 +112,8 @@ li::marker{
 }
 
 ul#right-list{
-padding: 0.5em 0.5em;
+    padding: 0.5em 0.5em;
+    margin: 0.5em;
 
 }
 
@@ -142,13 +146,17 @@ ul#left-list li{
     border-radius: 15px;
 }*/
 
+.profile .material-symbols-outlined{
+font-size: 1.8em;
+}
+
 .buttons{
     
 }
 
 button{
     border-radius: 15%;
-    background-color: beige;
+    background-color: #f2cbc9c4;
     padding: 0.5em;
     margin: 0.5em;
 }
@@ -170,6 +178,30 @@ a {
     font-size:1.4em;
 }
 
+.profile-trending{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px
+}
+
+.image-trending{
+    width: 3em;
+    height: 3em;
+    border-radius: 30px;
+    border: 2px solid beige;
+}
+.profile-trending img {
+    margin-right: 10px;
+}
+.trending-project {
+    font-size: 1em;
+    color: rgb(88, 88, 88);
+}
+
+.trending-username {
+    font-size: 1em;
+    font-weight: 600;
+}
 /*right*/
 
 .right{
@@ -201,12 +233,15 @@ a {
 .material-symbols-outlined{
     font-size: larger;
     opacity: 0.8;
+    align-self: center;
 }
 
 .profile{
     padding: 1em;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+    gap:0.5em;
     
 }
 
@@ -248,6 +283,7 @@ a {
    
 }
 
+
 .content-right{
     display: flex;
     flex-direction: column;
@@ -255,17 +291,14 @@ a {
     padding: 0 1em;
 }
 
-.announcements{
-    flex-grow: 2;
-    
+.announcements{ 
     background-color: beige;
     border-radius: 10px;
 }
 
 .trending{
-    flex-grow: 1;
-    background-color: #f2cbc9;
-    border-radius: 10px;
+    background-color: #f2cbc9c4;
+    border-radius: 10px; padding: 1em;
 }
 
 .image{
