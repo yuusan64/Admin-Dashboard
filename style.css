@@ -1,3 +1,9 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*main*/
 body,
 html {
   height: 100%;
@@ -11,14 +17,16 @@ html {
     grid-template-columns: 300px auto;
 }
 input{
+    padding: 0.2em;
     border: none;
     border-radius: 10px;
-    width: 100%;
+    min-width: 40%;
     background-color: #e7e5e4;
+    padding-left: 0.5em;
 }
 .search-bar{
     display:flex;
-    justify-content: center;
+    
     padding:1em;
     height: fit-content;
     gap: 0.5em;
@@ -30,13 +38,26 @@ input{
 }
 
 .profile-pic{
-    height: 12vh;
+    background-image: url(images/ProfilePic.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    max-height: 12vh;
+    /* height: auto; */
     width: 5vw;
     border-radius: 50%;
     border-style: double;
     border-color: #F3B1AD;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
 }
 
+.profile-pic img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 .Calculator{ 
     background-image: url("images/Calculator.png");
@@ -64,68 +85,30 @@ input{
 
 h3{
  margin: 0;
+ font-weight: 550;
 }
 
 .git{
-    background-image: url("images/github-mark.png");
+    background-image: url(images/github-mark.png);
     background-position: center;
     background-size: cover;
-    height:2.5em;
-    width:2.5em;
+    min-height: 2.5em;
+    min-width: 2.5em;
     opacity: 0.9;
+    border-radius: 50%;
 }
+
 /*left*/
 .left{
     display: grid;
 }
-
-/*background-image: linear-gradient(to bottom, #F3B1AD, #B48D8E);*/
-
-nav{
-    display: flex;
-    flex-direction: column;
-    gap:5px;
+.sidebar  {
+    background-color: beige;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    padding-top: 5em;
+    
 }
-
-ul#left-list{
-    list-style: none;
-    padding: 0 0 0.5em 2em;
-}
-
-
-ul#right-list li {
-    list-style: none;
-    background-image: url(images/list-icon.png);
-    background-repeat: no-repeat;
-    /* background-position: left center; */
-    background-size: 20px;
-    padding: 0.5em 1em 0.5em 2em;
-    background-position-y: 0.7em;
-}
-
-
-li::marker{
-    font-size: 1em;
-    list-style-position: inside;
-    background-size: 20px;
-
-}
-
-ul#right-list{
-    padding: 0.5em 0.5em;
-    margin: 0.5em;
-
-}
-
-ul#left-list li{
-    padding-top: 2em;
-    display: flex;
-    gap: 0.5em;
-    align-items: center;
-    border-bottom-color: #f3c2bf;
-    border-bottom-style: dashed;
-}
-
 .dashboard{
     display: flex;
 }
@@ -135,35 +118,41 @@ ul#left-list li{
     width: 4vw;
     padding: 0 0.5em;
 }
+.section-1, .section-2{
+    display: flex;
+}
 
+ul#left-list{
+    list-style: none;
+    padding: 0 0 0.5em 2em;
+}
 
-/*.Calculator, .Etch-a-sketch, .Rock-Paper-Scissors, .signupForm{
-
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-style: solid;
-    border-radius: 15px;
-}*/
-
-.profile .material-symbols-outlined{
-font-size: 1.8em;
+ul#left-list li{
+    padding: 2em 0em 0.3em 0em;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    border-bottom-color: #f3c2bf;
+    border-bottom-style: dashed;
 }
 
 .buttons{
+    display: flex;
+    justify-content: end;
+    align-items:end;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
     
 }
 
-button{
+.buttons button{
     border-radius: 15%;
     background-color: #f2cbc9c4;
     padding: 0.5em;
     margin: 0.5em;
+    cursor: pointer;
 }
 
-.section-1, .section-2{
-    display: flex;
-}
 
 .projects{
    display:flex;
@@ -172,9 +161,8 @@ button{
    padding: 0 0 0 1em;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+li a{
+    
     font-size:1.4em;
 }
 
@@ -219,15 +207,31 @@ a {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 4em 3fr;
-    
+    padding: 0.5em 0 0.5em 0;
 }
 
-.sidebar  {
-    background-color: beige;
-    grid-column: 1/2;
-    grid-row: 1/5;
-    padding-top: 5em;
-    
+ul#right-list li {
+    list-style: none;
+    background-image: url(images/list-icon.png);
+    background-repeat: no-repeat;
+    /* background-position: left center; */
+    background-size: 20px;
+    padding: 0.5em 1em 0.5em 2em;
+    background-position-y: 0.7em;
+}
+
+
+li::marker{
+    font-size: 1em;
+    list-style-position: inside;
+    background-size: 20px;
+
+}
+
+ul#right-list{
+    padding: 0.5em 0.5em;
+    margin: 0.5em;
+
 }
 
 .material-symbols-outlined{
@@ -237,11 +241,11 @@ a {
 }
 
 .profile{
-    padding: 1em;
+    padding: 0em 1.8em 0em 1em;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap:0.5em;
+    gap: 0.2em;
     
 }
 
@@ -310,10 +314,44 @@ a {
     position: absolute;
     right:0;
     top:1;
-    padding: 0.2em;
+    padding: 0.2em 0.5em 0em 0em; 
+}
+
+.action-block a{
+    opacity: 0.9;
 }
 
 .image-footer{
     display: flex;
 }
 
+.light a:hover{
+    filter:invert(100%);
+}
+
+.dark a:hover{
+    filter:invert(30%);
+}
+
+input:focus{
+    border: 0;
+    outline: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  .profile button{
+    border:none; 
+    background-color: #FAFAF9;
+    cursor: pointer;
+  }
+
+  .profile button:hover{
+    color: #F3B1AD;
+  }
+
+  .profile .material-symbols-outlined {
+    font-size: 1.8em;
+}

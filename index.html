@@ -18,78 +18,67 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
 </head>
 <body>
+    <script src="index.js" defer></script>
     <div class="container">
         <div class="left">
-            <div class="sidebar">
+            <div class="sidebar" id="sidebar">
                 <div class="dashboard">
                     
-                        <img class="dashboard-icon" src="images/cat2.png">
+                        <img class="dashboard-icon" id="dashboard-icon" src="images/cat2.png">
                     
                     <div>
                         <h1>Dashboard</h1>
                     </div>
                 </div>
                 <div class="section-1">
-                    <div class="icons">
+                    <div>
                         <ul id="left-list">
-                            <li><span class="material-symbols-outlined">home</span> <a title="Home" href="#"><span>Home</span></a></li>
-                            <li><span class="material-symbols-outlined">face</span> <a title="Profile" href="#"><span>Profile</span></a></li>
-                            <li><span class="material-symbols-outlined">chat_bubble</span> <a title="Messages" href="#"><span>Messages</span></a></li>
-                            <li><span class="material-symbols-outlined">history</span> <a title="History" href="#"><span>History</span></a></li>
-                            <li><span class="material-symbols-outlined">task</span> <a title="Tasks" href="#"><span>Tasks</span></a></li>
-                            <li><span class="material-symbols-outlined">groups</span> <a title="Communities" href="#"><span>Communities</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined ">home</span> <a title="Home" href="#"><span>Home</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined">face</span> <a title="Profile" href="#"><span>Profile</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined">chat_bubble</span> <a title="Messages" href="#"><span>Messages</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined">history</span> <a title="History" href="#"><span>History</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined">task</span> <a title="Tasks" href="#"><span>Tasks</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined">groups</span> <a title="Communities" href="#"><span>Communities</span></a></li>
                         </ul>
                     </div>
-
-                      <!--  <div class="items">
-                            <ul>
-                                <li><a title="Home" href="#"><span>Home</span></a></li>
-                                <li><a title="Profile" href="#"><span>Profile</span></a></li>
-                                <li><a title="Messages" href="#"><span>Messages</span></a></li>
-                                <li><a title="History" href="#"><span>History</span></a></li>
-                                <li><a title="Tasks" href="#"><span>Tasks</span></a></li>
-                                <li><a title="Communities" href="#"><span>Communities</span></a></li>
-                            </ul>
-                        </div>-->
                     
                 </div>
                 <div class="section-2">
-                    <div class="icons">
+                    <div class>
                         <ul id="left-list">
-                            <li><span class="material-symbols-outlined" >settings</span> <a title="Settings" href="#"><span>Settings</span></a></li>
-                            <li><span class="material-symbols-outlined" >contact_support</span> <a title="Support" href="#"><span>Support</span></a></li>
-                            <li><span class="material-symbols-outlined" >verified_user</span><a title="Privacy" href="#"><span>Privacy</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined" >settings</span> <a title="Settings" href="#"><span>Settings</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined" >contact_support</span> <a title="Support" href="#"><span>Support</span></a></li>
+                            <li class="left-list"><span class="material-symbols-outlined" >verified_user</span><a title="Privacy" href="#"><span>Privacy</span></a></li>
                         </ul>
-                    </div>
-                        
-                       <!-- <div class="items">
-                            <ul>
-                                <li><a title="Settings" href="#"><span>Settings</span></a></li>
-                                <li><a title="Support" href="#"><span>Support</span></a></li>
-                                <li><a title="Privacy" href="#"><span>Privacy</span></a></li>
-                            </ul>
-                        </div>-->                 
+                    </div>         
                 </div>
             </div>
         </div>
     
-    <div class="right">
-        <div class="header">
+    <div class="right" id="right">
+        <div class="header" id="header">
             <div class="search-bar"> 
                 <span class="material-symbols-outlined">search</span>
-                <input type="search">  
+                <input type="search" id="searchbar">  
             </div>
             <div class="profile">
                 <span class="material-symbols-outlined">
                     notifications
                     </span>
-                <div class="git"></div>    
+                    <button onclick="dark_mode()">
+                        <span class="material-symbols-outlined" style="font-size: 2.2em;">
+                            dark_mode
+                            </span>
+                    </button>
+                <div class="git" id="git"></div>    
             </div>
             <div class="user-info">
-                <div>
-                    <img class="profile-pic" src="images/ProfilePic.png">
+                <div class="profile-pic" id="ppic">
+                    
                 </div>
                 <div class="intro">
                     <h5>Hi there,</h5>
@@ -112,33 +101,39 @@
             <div class="content-left">
                 
                     
-                        <div class="project Calculator">
-                                <div class="action-block">
-                                    <span class="material-symbols-outlined code">code</span>
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                        </span>
+                        <div class="project Calculator" >
+                                <div class="action-block light">
+                                    <a href="https://github.com/yuusan64/Calculator" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined ">code</span></a>
+                                    <a href="https://yuusan64.github.io/Calculator/" target="_blank" rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">
+                                            visibility
+                                            </span>
+                                    </a>
                                 </div>
                         </div>
-                        <div class="project Etch-a-sketch">
+                        <div class="project Etch-a-sketch dmode">
                            
                     
-                                <div class="action-block">
-                                    <span class="material-symbols-outlined code">code</span>
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                        </span>
+                                <div class="action-block dark">
+                                    <a href="https://github.com/yuusan64/Etch-a-Sketch/" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined dmode">code</span></a>
+                                    <a href="https://yuusan64.github.io/Etch-a-Sketch/" target="_blank" rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined ">
+                                            visibility
+                                            </span>
+                                    </a>
                                 </div>
                            
                     
                         </div>
-                        <div class="project Rock-Paper-Scissors">
+                        <div class="project Rock-Paper-Scissors  dmode">
                             
-                                <div class="action-block">
-                                    <span class="material-symbols-outlined code">code</span>
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                        </span>
+                                <div class="action-block dark">
+                                    <a href="https://github.com/yuusan64/Rock-Paper-Scissors" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined dmode">code</span></a>
+                                    <a href="https://yuusan64.github.io/Rock-Paper-Scissors/" target="_blank" rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">
+                                            visibility
+                                            </span>
+                                    </a>
                                
                             </div>
                     
@@ -146,11 +141,13 @@
                         <div class="project signupForm">
                            
                     
-                                <div class="action-block">
-                                    <span class="material-symbols-outlined code">code</span>
-                                    <span class="material-symbols-outlined">
-                                        visibility
-                                        </span>
+                                <div class="action-block light">
+                                    <a href="https://github.com/yuusan64/sign-up-form" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined ">code</span></a>
+                                    <a href="https://yuusan64.github.io/sign-up-form/" target="_blank" rel="noopener noreferrer">
+                                        <span class="material-symbols-outlined">
+                                            visibility
+                                            </span>
+                                    </a>
                                 </div>
                            
                         </div>
@@ -159,7 +156,7 @@
                 
             <div class="content-right">
                 <h3>Announcements</h3>
-            <div class="announcements">
+            <div class="announcements" id="announcements">
                 <ul id="right-list">
                     <li><h3>Site Maintenance</h3>
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
@@ -171,30 +168,30 @@
                 </ul>
             </div>
             <h3 style="padding-top: 0.5em;">Trending</h3>
-            <div class="trending">
+            <div class="trending" id="trending">
                 <div class="profile-trending">
-                    <div><img src="images/fox.png" class="image-trending"></div>
+                    <div><a href="#"><img src="images/fox.png" class="image-trending"></a></div>
                     <div class="trending-info">
                         <div class="trending-username">@tegan</div>
                         <div class="trending-project">World Peace Builder</div>
                     </div>
                 </div>
                 <div class="profile-trending">
-                    <div><img src="images/bee.png" class="image-trending"></div>
+                    <div><a href="#"><img src="images/bee.png" class="image-trending"></a></div>
                     <div class="trending-info">
                         <div class="trending-username">@johnwest</div>
                         <div class="trending-project">Super cool project</div>
                     </div>
                 </div>
                 <div class="profile-trending">
-                    <div><img src="images/sheep.png" class="image-trending"></div>
+                    <div><a href="#"><img src="images/sheep.png" class="image-trending"></a></div>
                     <div class="trending-info">
                         <div class="trending-username">@kendall</div>
                         <div class="trending-project">Life Changing App</div>
                     </div>
                 </div>
                 <div class="profile-trending" style="padding-bottom: 0%;">
-                    <div><img src="images/blobfish.png" class="image-trending"></div>
+                    <div><a href="#"><img src="images/blobfish.png" class="image-trending"></a></div>
                     <div class="trending-info">
                         <div class="trending-username">@alex</div>
                         <div class="trending-project">No Traffic Maker</div>
@@ -208,7 +205,3 @@
 </body>
 </html>
 
-<div class="wrapper">
-    <div class="navi"></div>
-    <div id="infoi"></div>
-  </div>
