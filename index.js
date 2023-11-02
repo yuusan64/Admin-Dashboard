@@ -53,6 +53,7 @@ for(let i=0;i<project.length;i++){
 }
 
 project[1].setAttribute('style', opacity);
+project[2].setAttribute('style', "opacity:0.9")
 
 for(let i=0;i<dash.length;i++){
     dash[i].setAttribute('style', dash_dark);
